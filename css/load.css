@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+/* 全画面表示のためのスタイル */
+html,body {
+  /* 横幅をいっぱいにする */
+  width: 100%;
+  /* 縦幅をウィンドウサイズと同じにする */
+  height: 100vh;
+  /* マージンとパディングをなくす */
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif,monospace;
+}
+
+h1 {
+  position: absolute;
+
+  /* 左右のセンタリング */
+  left: 50%;
+  /* 右に行きすぎるので半分戻す */
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+
+  /* 上下の位置 */
+  top: 50px;
+
+  text-align: center;
+  line-height: 200px;
+  color: #ffffff;
+  font-family: "Sawarabi Mincho";
+}

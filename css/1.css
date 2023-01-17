@@ -1,0 +1,72 @@
+body {
+  animation: bgchange 15s ease infinite;/*変化の時間を変更したい場合は20sの部分を好きな時間に変更*/
+  }
+  
+  @keyframes bgchange{
+        0%  {background:#ffc1c180;}/*変化させたい色*/
+        15% {background:#fff1c180;}/*変化させたい色*/
+        30% {background:#e1ffc180;}/*変化させたい色*/
+        45% {background:#c1ffcf80;}/*変化させたい色*/
+        60% {background:#c1ffff80;}/*変化させたい色*/
+        75% {background:#c1cfff80;}/*変化させたい色*/
+        90% {background:#e1c1ff80;}/*変化させたい色*/
+        100%{background:#ffc1f180;}/*変化させたい色*/
+      }
+
+/*========= ローディング画面のためのCSS ===============*/
+#splash {
+  	position: absolute;
+	text-align: center;
+	color:  #979797;
+	font-size: 100px;
+	top: 300px;
+}
+
+/*========= 画面遷移のためのCSS ===============*/
+.splashbg{
+	position: fixed;
+	top: 0;
+	right:0;
+	bottom:0;
+	left: 0;
+	border-width: 0px;/*開始はボーダーの太さは0*/
+	border-style:solid;
+    border-color: #202020dd;/*拡大する四角の色*/
+	animation-duration:.5s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes backBoxAnime{
+	99.9% {/*アニメーション終了ぎりぎりまで*/
+        z-index: 2;/*最前面に*/
+		border-width: 0px;/*開始はボーダーの太さは0*/
+	}
+    100%{
+       z-index: -1; /*最背面に*/
+        border-width: 0px;/*終了はボーダーの太さは0*/
+    }
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+#container{
+    position: relative;
+	opacity: 0;/*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #container{
+	animation-name:PageAnimeAppear;
+	animation-duration:1s;
+	animation-delay:0.2s;
+	animation-fill-mode:forwards;
+	opacity: 0;
+}
+
+@keyframes PageAnimeAppear{
+	0% {
+	opacity: 0;
+	}
+	100% {
+	opacity: 1;
+}
+}

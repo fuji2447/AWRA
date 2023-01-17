@@ -1,0 +1,465 @@
+@charset "utf-8";
+
+/* スタートボタン
+----------------------*/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  height: 100vh;
+  /* margin: 0 auto; */
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw !important;
+  /* height: 100%; */
+  font-family: "Sawarabi Mincho", Times, "MS Mincho", sans-serif, monospace;
+  padding: 30px;
+  /* position: relative; */
+  margin: 0;
+  padding: 0;
+}
+
+.wf-sawarabimincho {
+  font-family: "Sawarabi Mincho"; }
+
+div.text p {
+  margin: 2em 0px;
+  font-family: "Sawarabi Mincho", Times, "MS Mincho", sans-serif, monospace;
+  font-size: 20px;
+  z-index: 1000;
+}
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  top: 100px;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+  z-index: 1000;
+}
+
+a.btn-svg {
+  font-weight: 700;
+  line-height: 54px;
+  width: 204px;
+  height: 54px;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: transparent;
+  z-index: 1000;
+}
+
+a.btn-svg svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+a.btn-svg svg rect {
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+  stroke: #000;
+  stroke-width: 2;
+  stroke-dasharray: 200px, 16px;
+  stroke-dashoffset: 70px;
+  z-index: 1000;
+}
+
+a.btn-svg:hover svg rect {
+  stroke-dashoffset: 284px;
+  z-index: 1000;
+}
+
+a.btn-svg span {
+  color: #000;
+  z-index: 1000;
+}
+
+/* topのボタン */
+.nav_btn {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  top: 0px;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+  z-index: 100;
+}
+
+/* ビデオ
+----------------------*/
+.vd1 {
+  width: 250px;
+  height: 180px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.vd2 {
+  width: 250px;
+  height: 180px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000;
+}
+
+.vd3 {
+  width: 250px;
+  height: 180px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1000;
+}
+
+
+/* ボタン
+----------------------*/
+.choose_box ul {
+  text-align: center;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  bottom: 10em;
+  z-index: 1000;
+}
+
+.choose_box ul li {
+  width: 200px;
+  margin: 20px;
+  list-style: none;
+  z-index: 1000;
+}
+
+.choose_box ul li a {
+  color: #2c2c2c;
+  display: block;
+  padding: 20px 60px;
+  text-align: center;
+  background-color: #00000000;
+  font-weight: 600;
+  font-size: 18px;
+  border: 2px solid #2c2c2c;
+  text-decoration: none;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  z-index: 1000;
+}
+
+.choose_box ul li a:hover {
+  background-color: #2c2c2c;
+  color: #ffffff;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  -o-transition: 0.7s;
+  transition: 0.7s;
+  z-index: 1000;
+}
+
+.choose_box {
+  width: 100%;
+  z-index: 1000;
+}
+
+.choose_box p {
+  font-size: 24px;
+  display: block;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.fit {
+  width: 100%;
+}
+
+#q_08 a,
+#q_09,
+#q_10 span {
+  display: block;
+  width: 100%;
+}
+#q_08 a,
+#q_09,
+#q_10 a {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+@keyframes rotation{
+  0%{ transform:rotate(0);}
+  100%{ transform:rotate(360deg); }
+}
+
+.cd-fixed-bg {
+  position: relative;
+  min-height: 100%;
+  height: 100%;
+/*--スクロールをさせるため 高さ指定--*/
+  background-size: cover;
+/*--背景画像のサイズ--*/
+  background-attachment: fixed;
+/*--背景画像の固定--*/
+  background-repeat: no-repeat;
+/*--背景画像の繰り返し--*/
+  background-position: center center;
+/*--背景画像の位置--*/
+  z-index: 2;
+  padding: 5em 0;
+}
+
+.cd-fixed-bg.cd-bg-1  {
+background-image: url('画像パス');
+}
+
+.area {
+  width: 80%;
+  margin: 0 auto;
+  padding: 10em 0;
+  text-align: center;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+/* サイトID
+----------------------*/
+.site-id {
+  position: relative;
+  float: left;
+}
+.site-id h1 {
+  display: inline-block;
+  margin: 10px 0 10px 20px;
+}
+
+/* グローバルナビゲーション
+----------------------*/
+.global-nav {
+  float: right;
+  margin: 0;
+  list-style: none;
+}
+
+.global-nav li a:hover {
+  text-decoration: none;
+}
+.cd-main-header {
+  height: 70px;
+  border-bottom: 5px solid #9d928a;
+  background-color: #9d928a;
+}
+
+/* 大きさゼロ要素
+----------------------*/
+ div.ribbon:before, div.ribbon:after{
+  content: "";
+  border-style: solid;
+  border-width: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+ }
+
+/* index.htmlページ
+----------------------*/
+.top {
+  background-color: #eee;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.top_txt {
+  text-align: center;
+  z-index: 1000;
+}
+
+.container {
+  margin: 20px auto;
+  max-width: 1080px;
+  z-index: 1000;
+}
+
+.content_item {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
+}
+
+.content_item img {
+  width: 350px;
+  height: auto;
+}
+
+.content_txt {
+  padding: 10px 0 0 20px;
+}
+
+.content_txt p {
+  max-width: 500px;
+  padding: 10px 0;
+}
+
+.page_content {
+  text-align: center;
+}
+
+.page_content h2,.page_content img,.content_inner {
+  padding: 10px 0;
+}
+
+.page_content img {
+  width: 500px;
+  height: auto;
+}
+
+.content_inner {
+  max-width: 600px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+/* 画像レイアウト */
+.image img {
+  width: 380px;
+  cursor: pointer;
+  z-index: 1000;
+  padding: 18px;
+  justify-content: center;
+}
+
+#defaultCanvas0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#foreground {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+/* 縦横綺麗にレイアウトしたい時に設定する */
+/* これ指定すると中身が横に並ぶ */
+.flex {
+  display: flex;
+  z-index: 1000;
+}
+
+/* 縦に並べる時に設定 */
+.flex-col {
+  flex-direction: column;
+  z-index: 1000;
+}
+
+/* センター合わせ */
+.justify-center {
+  justify-content: center;
+}
+
+/* センター合わせ */
+.items-center {
+  align-items: center;
+}
+
+h1 {
+font-size: 50px ;
+z-index: 1000;
+}
+
+#voivo {
+  position: absolute ;
+  right: 30px;
+  bottom: 1.5em;
+  font-size: 15px ;
+  z-index: 1000;
+}
+
+.flexbox{
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  height: auto;
+  z-index: 1000;
+}
+
+.content-box {
+  background: #ffffffb1;
+  margin: auto; /*上下左右中央に*/
+  width: 60%; /*widthの指定は必須*/
+  height: 100%;
+  z-index: -1;
+  padding: 80px;
+}
+
+.content-box2 {
+  background: #ffffffb1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; 
+  margin: auto; /*上下左右中央に*/
+  width: 55%; /*widthの指定は必須*/
+  height: 90%;
+  z-index: -1;
+  padding: 40px;
+}
+
+.text {
+  position: relative;
+  z-index: 100;
+}
