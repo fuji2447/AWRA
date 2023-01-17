@@ -45,7 +45,7 @@ button.btn {
   font-weight: 700;
   line-height: 1.5;
   position: relative;
-  top: 100px;
+  top: 160px;
   display: inline-block;
   padding: 1rem 4rem;
   cursor: pointer;
@@ -442,7 +442,7 @@ z-index: 1000;
   width: 60%; /*widthの指定は必須*/
   height: 100%;
   z-index: -1;
-  padding: 80px;
+  padding:  50px;
 }
 
 .content-box2 {
@@ -462,4 +462,11 @@ z-index: 1000;
 .text {
   position: relative;
   z-index: 100;
+}
+
+.icon{
+  position: relative;
+  z-index: 100;
+  text-align: center;
+  bottom: 10px;
 }
