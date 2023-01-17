@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="view port" content="width=device-width,initial-scale=1">
+    <meta name="description" content="お笑い芸人に関する診断サイトです">
+
+    <title>WARA/NOMA−オススメ芸人診断サイト</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="stylesheet" type="text/css" href="css/1.css">
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
+</head>
+
+<body>
+    <div id="foreground">
+        <div class="choose_box flex flex-col items-center">
+
+<a href="https://voicevox.hiroshiba.jp/" id="voivo" target="_blank">(https://voicevox.hiroshiba.jp/)</a>
+
+<div id="splash">
+    <div>Loading...</div>
+</div>
+
+    <div id="container">
+            <div id="q_01" class="fit flex flex-col items-center justify-center">
+                <div class="flex">
+                    <video controls src="video/A-1.mp4" class="vd1"></video>
+                    <video controls src="video/A-2.mp4" class="vd2"></video>
+                    <video controls src="video/A-3.mp4" class="vd3"></video>
+                </div>
+
+            <div class="text">
+                <p>Q1.どれが好みですか?</p>
+                <p>⬇︎</p>
+                <p>⬇︎</p>
+                <p>⬇︎</p>
+            </div>
+
+                <ul>
+                    <li class="even"><a class="btn" href="#q_02" data-value="1">①</a></li>
+                    <li class="odd"><a class="btn" href="#q_02" data-value="2">②</a></li>
+                    <li class="odd"><a class="btn" href="#q_02" data-value="3">③</a></li>
+                </ul>
+
+                <!-- <a class="nav_btn" href="top.html">もどる</a> -->
+
+            </div>
+
+            <div id="q_02" style="display: none;" class="flex flex-col items-center justify-center">
+                <div class="flex">
+                    <video controls src="video/B-1.mp4" class="vd1"></video>
+                    <video controls src="video/B-2.mp4" class="vd2"></video>
+                    <video controls src="video/B-3.mp4" class="vd3"></video>
+                </div>
+
+            <div class="text">
+                <p>Q2.どれが好みですか?</p>
+                <p>⬇︎</p>
+                <p>⬇︎</p>
+                <p>⬇︎</p>
+            </div>
+
+                <ul>
+                    <li class="even"><a class="btn" href="#q_03" data-value="1">①</a></li>
+                    <li class="odd"><a class="btn" href="#q_03" data-value="2">②</a></li>
+                    <li class="odd"><a class="btn" href="#q_03" data-value="3">③</a></li>
+                </ul>
+
+
+                <!-- <a class="btn" href="#q_01" style="top:0px;">もどる</a> -->
+
+            </div>
+
+            <div id="q_03" style="display: none;" class="flex flex-col items-center justify-center">
+                <div class="flex">
+                    <video controls src="video/C-1.mp4" class="vd1"></video>
+                    <video controls src="video/C-2.mp4" class="vd2"></video>
+                    <video controls src="video/C-3.mp4" class="vd3"></video>
+                </div>
+
+            <div class="text">
+                <p>Q3.どれが好みですか?</p>
+                <p>⬇︎</p>
+                <p>⬇︎</p>
+                <p>⬇︎</p>
+            </div>
+
+                <ul>
+                    <li class="even"><a class="btn" href="#check" data-value="1">①</a></li>
+                    <li class="odd"><a class="btn" href="#check" data-value="2">②</a></li>
+                    <li class="odd"><a class="btn" href="#check" data-value="3">③</a></li>
+                </ul>
+
+                <!-- <a class="btn" href="#q_02" style="top:0px;">もどる</a> -->
+            </div>
+
+        <div id="a_01" style="display: none;">
+            <div class="text">
+                <p>あなたにおすすめなのは…</p>
+                <p>⬇︎</p>
+                <p>⬇︎</p>
+                <p>⬇︎</p>
+            </div>
+
+                <h1>間が [短め] の芸人</h1>
+                <span><a class="btn" href="main.html">質問にもどる</a></span>
+                <span><a class="btn" href="load1.html">例えばこんな芸人</a></span>
+            </div>
+
+        <div id="a_02" style="display: none;">
+            <div class="text">
+                <p>あなたにおすすめなのは…</p>
+                <p>⬇︎</p>
+                <p>⬇︎</p>
+                <p>⬇︎</p>
+            </div>
+
+                <h1>間が [程良い] 芸人</h1>
+                <span><a class="btn" href="main.html">質問にもどる</a></span>
+                <span><a class="btn" href="load2.html">例えばこんな芸人</a></span>
+            </div>
+
+        <div id="a_03" style="display: none;">
+            <div class="text">
+                <p>あなたにおすすめなのは…</p>
+                <p>⬇︎</p>
+                <p>⬇︎</p>
+                <p>⬇︎</p>
+            </div>
+
+                <h1>間が [長め] の芸人</h1>
+                <span><a class="btn" href="main.html">質問にもどる</a></span>
+                <span><a class="btn" href="load3.html">例えばこんな芸人</a></span>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="content-box2"></div>
+    
+    </div>
+
+    <script>
+        let answer = ""
+
+        $(function () {
+
+            // ボタンがクリックされたら
+            $(".btn").on("click", function () {
+
+                // 回答を記録しておく
+                answer = answer + $(this).attr("data-value")
+
+                // クリックされたボタンを非表示にする
+                $(this).closest("div").css("display", "none");
+
+                // 次に表示する要素を探す （hrefに要素のidを指定しておく)
+                id = $(this).attr("href");
+
+                if (id == "#check") {
+                    // どれにも当てはまらない時の結果を決めておく
+                    id = '#a_02'
+
+                    // 回答パターンから、結果を決める
+                    if (answer == '111') { id = '#a_01' }
+                    if (answer == '112') { id = '#a_01' }
+                    if (answer == '113') { id = '#a_01' }
+                    if (answer == '121') { id = '#a_01' }
+                    if (answer == '131') { id = '#a_01' }
+                    if (answer == '211') { id = '#a_01' }
+                    if (answer == '311') { id = '#a_01' }
+
+                    if (answer == '122') { id = '#a_02' }
+                    if (answer == '123') { id = '#a_02' }
+                    if (answer == '132') { id = '#a_02' }
+                    if (answer == '212') { id = '#a_02' }
+                    if (answer == '213') { id = '#a_02' }
+                    if (answer == '221') { id = '#a_02' }
+                    if (answer == '222') { id = '#a_02' }
+                    if (answer == '223') { id = '#a_02' }
+                    if (answer == '231') { id = '#a_02' }
+                    if (answer == '232') { id = '#a_02' }
+                    if (answer == '312') { id = '#a_02' }
+                    if (answer == '321') { id = '#a_02' }
+                    if (answer == '322') { id = '#a_02' }
+
+                    if (answer == '133') { id = '#a_03' }
+                    if (answer == '233') { id = '#a_03' }
+                    if (answer == '313') { id = '#a_03' }
+                    if (answer == '323') { id = '#a_03' }
+                    if (answer == '331') { id = '#a_03' }
+                    if (answer == '332') { id = '#a_03' }
+                    if (answer == '333') { id = '#a_03' }
+
+                    // 回答をリセット
+                    answer = ""
+                }
+
+                // 次に表示する要素に fit クラスを追加して、表示する
+                $(id).addClass("fit").show("slow");
+
+            });
+            
+        });
+    </script>
+
+    <!-- 背景アニメーション用 -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js" type="text/javascript"></script>
+    <!-- 背景アニメーション -->
+    <script src="js/mySketch.js.js" type="text/javascript"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--自作のJS-->
+    <script src="js/1.js"></script>
+
+
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/jquery.mobile.custom.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            var $win = $(window),
+                $main = $('main'),
+                $nav = $('nav'),
+                navHeight = $nav.outerHeight(),
+                navPos = $nav.offset().top,
+                fixedClass = 'is-fixed';
+
+            $win.on('load scroll', function() {
+                var value = $(this).scrollTop();
+                if ( value > navPos ) {
+                    $nav.addClass(fixedClass);
+                    $main.css('margin-top', navHeight);
+                } else {
+                    $nav.removeClass(fixedClass);
+                    $main.css('margin-top', '0');
+                }
+            });
+        });
+          //ページスクロール
+          $(function() {
+          // スクロールのオフセット値
+          var offsetY = -10;
+          // スクロールにかかる時間
+          var time = 500;
+          // ページ内リンクのみを取得
+          $('a[href^=#]').click(function() {
+          // 移動先となる要素を取得
+          var target = $(this.hash);
+          if (!target.length) return ;
+          // 移動先となる値
+          var targetY = target.offset().top+offsetY;
+          // スクロールアニメーション
+          $('html,body').animate({scrollTop: targetY}, time, 'swing');
+          // ハッシュ書き換えとく
+          window.history.pushState(null, null, this.hash);
+          // デフォルトの処理はキャンセル
+          return false;
+          });
+        });
+    </script>
+
+</body>
+
+</html>
